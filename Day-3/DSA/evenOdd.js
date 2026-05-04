@@ -8,19 +8,16 @@ let res = findEvenorOdd(num);
 
 console.log(res);
 
-// find the missing number;
+//is power of 2;
 
-let arr = [1, 3, 4, 5, 6, 7];
+function isPowerOfTwo(n) {
+    if (n <= 0) return false;
+    if (n & (n - 1)) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};
 
-function findMissing(arr) {
-    let sum = arr.reduce((acc, el) => {
-        return acc + el
-    }, 0)
-
-    let n = arr[arr.length-1];
-
-    return (((n * (n+1))) / 2) - sum;
-}
-
-
-console.log(findMissing(arr))
+console.log(isPowerOfTwo(64));
